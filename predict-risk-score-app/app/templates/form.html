@@ -143,8 +143,13 @@
             <br>
 
 
-            <label for=""
             <button type="submit">Predict Risk Score</button>
+
+            {% if result is not none %}
+                <div class="result">
+                    <h2>Predicted Risk Score: {{ result }}</h2>
+                </div>
+            {% endif %}
         </form>
     </div>
 </body>
