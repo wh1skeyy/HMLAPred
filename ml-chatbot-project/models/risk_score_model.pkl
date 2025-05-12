@@ -1,0 +1,2 @@
+<contents of /ml-chatbot-project/ml-chatbot-project/models/risk_score_model.pkl>
+<serialized model data>
