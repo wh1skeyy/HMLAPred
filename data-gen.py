@@ -4,10 +4,10 @@ from scipy import stats
 from datetime import datetime, timedelta
 
 # Number of samples
-num_samples = 2000
+num_samples = 20000
 
 # Seed for reproducibility
-np.random.seed(71)
+np.random.seed(96) #69 for data-1, 96 for data-2
 
 def generate_correlated_features(num_samples):
     # Generate base features
@@ -233,8 +233,8 @@ def calculate_overall_risk(row):
 df['RiskScore'] = df.apply(calculate_overall_risk, axis=1)
 
 # Save to CSV
-df.to_csv('data-raw.csv', index=False)
-print("\nFocused synthetic data saved to 'data-raw.csv'")
+df.to_csv('data-2.csv', index=False) #change to 'data-2.csv' for data-2
+print("\nFocused synthetic data saved")
 
 # Display final feature count
 print(f"\nTotal number of features (including label): {len(df.columns)}")
