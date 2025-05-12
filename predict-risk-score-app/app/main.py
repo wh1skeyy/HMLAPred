@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
+import joblib
 
 app = Flask(__name__)
 
 # Load the trained model (assuming it's saved as a pickle file)
-# model = joblib.load('path_to_your_model.pkl')
+model = joblib.load('/workspaces/py-final/risk_score_model.pkl')
 
 # Dummy model for demonstration purposes
 class DummyModel:
