@@ -1,0 +1,151 @@
+activity_year (0): This indicates the calendar year in which the loan application or origination occurred.
+
+lei (0): This stands for Legal Entity Identifier. It's a unique global identifier for legal entities that are participants in financial transactions. It identifies the financial institution involved in the loan.
+
+derived_msa-md (0): This is the Derived Metropolitan Statistical Area/Metropolitan Division. It's a geographical region defined by the U.S. Office of Management and Budget (OMB) based on population and economic integration. This variable likely provides a standardized MSA/MD code for the property's location.
+
+state_code (227022): This represents the U.S. state in which the property related to the loan is located. It's likely represented using a standard state abbreviation or a numeric FIPS code. The significant number of missing values suggests this might be a key area to investigate.
+
+county_code (292335): This indicates the specific county within the state where the property is located. It's usually represented using a numeric FIPS code. Similar to state_code, the missing values here warrant attention.
+
+census_tract (327540): This is a small geographical subdivision defined by the U.S. Census Bureau for statistical purposes. It helps in analyzing data at a neighborhood level. The missing values here are also notable.
+
+conforming_loan_limit (39292): This likely indicates whether the loan amount falls within the limits set by government-sponsored enterprises (GSEs) like Fannie Mae and Freddie Mac for conforming loans. These limits vary by location and year.
+
+derived_loan_product_type (0): This is a derived variable indicating the type of loan product (e.g., conventional fixed-rate, FHA, VA). The "derived" suggests it was likely calculated or categorized from other loan characteristics.
+
+derived_dwelling_category (0): This derived variable specifies the category of the dwelling associated with the loan (e.g., single-family, multi-family, manufactured home).
+
+derived_ethnicity (0): This is a derived variable representing the ethnicity of the loan applicant(s). It's likely based on the ethnicity information provided by the applicant(s) according to standard categories.
+
+derived_race (0): Similar to derived_ethnicity, this derived variable represents the race of the loan applicant(s), based on the applicant(s)' self-reported race according to standard categories.
+
+derived_sex (0): This derived variable indicates the sex of the loan applicant(s) based on the information provided.
+
+action_taken (0): This variable describes the outcome of the loan application (e.g., loan originated, application approved but not accepted, application denied, withdrawn by applicant).
+
+purchaser_type (0): If the loan was originated and then sold, this variable identifies the type of entity that purchased the loan (e.g., Fannie Mae, Freddie Mac, private investor).
+
+preapproval (0): This indicates whether the loan applicant received preapproval for the loan before submitting the full application.
+
+loan_type (0): This specifies the type of loan, often categorized by the insuring or guaranteeing agency (e.g., Conventional, FHA, VA, RHS/Farm Service Agency).
+
+loan_purpose (0): This describes the reason for the loan (e.g., Home purchase, Home improvement, Refinancing).
+
+lien_status (0): This indicates the lien position of the loan (e.g., First lien, Second lien).
+
+reverse_mortgage (0): This indicates whether the loan is a reverse mortgage, which is typically available to homeowners aged 62 or older and allows them to access a portion of their home's equity.
+
+open-end_line_of_credit (0): This indicates whether the loan is an open-end line of credit, such as a HELOC (Home Equity Line of Credit), where the borrower can draw funds up to a certain limit.
+
+business_or_commercial_purpose (0): This indicates whether the primary purpose of the loan is for business or commercial use rather than personal residential use.
+
+loan_amount (0): This is the principal amount of the loan.
+
+loan_to_value_ratio (573160): This is the percentage representing the ratio of the loan amount to the appraised value of the property. A higher LTV generally indicates a riskier loan. The significant missing values should be investigated.
+
+interest_rate (2052850): This is the annual percentage rate charged on the outstanding loan balance. The very high number of missing values is a critical point to understand.
+
+rate_spread (2634417): This is the difference between the annual percentage rate (APR) of the loan and the average prime offer rate for comparable transactions. It's often used to identify higher-cost loans. The extremely high number of missing values needs thorough examination.
+
+hoepa_status (0): This indicates whether the loan is considered a "High-Cost" mortgage under the Home Ownership and Equity Protection Act (HOEPA).
+
+total_loan_costs (4037584): This represents the total costs associated with obtaining the loan, excluding interest. The high number of missing values is important.
+
+total_points_and_fees (7905061): This includes points paid to the lender and certain fees associated with the loan. The very high number of missing values is crucial to understand.
+
+origination_charges (3983843): These are fees charged by the lender for originating the loan. The high number of missing values needs investigation.
+
+discount_points (5760762): These are fees paid by the borrower to reduce the interest rate on the loan. The very high number of missing values suggests this might only be applicable to certain loan types or situations.
+
+lender_credits (6750344): These are credits from the lender to offset some of the borrower's closing costs, often in exchange for a higher interest rate. The very high number of missing values needs explanation.
+
+loan_term (155738): This is the period over which the loan is scheduled to be repaid, usually expressed in months.
+
+prepayment_penalty_term (7618996): This specifies the period during which a penalty would be charged if the borrower repays the loan early. The extremely high number of missing values likely indicates that most loans in the dataset do not have prepayment penalties.
+
+intro_rate_period (5957560): This is the period (in months) for which an introductory or teaser interest rate is offered on adjustable-rate mortgages (ARMs). The high number of missing values suggests this is not applicable to many loans.
+
+negative_amortization (0): This indicates whether the loan allows the outstanding principal balance to increase over time because the borrower's payments are less than the accruing interest.
+
+interest_only_payment (0): This indicates whether the loan allows for a period where the borrower only pays the interest and not the principal.
+
+balloon_payment (0): This indicates whether the loan has a large lump-sum payment due at the end of the loan term.
+
+other_nonamortizing_features (0): This likely indicates the presence of any other non-standard amortization features in the loan.
+
+property_value (247659): This is the appraised value of the property associated with the loan. The missing values should be considered.
+
+construction_method (0): This indicates the method used to construct the property (e.g., site-built, manufactured).
+
+occupancy_type (0): This describes how the borrower intends to use the property (e.g., Principal residence, Second residence, Investment property).
+
+manufactured_home_secured_property_type (0): For loans on manufactured homes, this specifies whether the loan is secured by the home and the land, or just the home.
+
+manufactured_home_land_property_interest (0): For loans on manufactured homes, this indicates the borrower's interest in the land (e.g., Fee simple, Leasehold).
+
+total_units (0): This indicates the total number of individual units in the property (e.g., for multi-family dwellings).
+
+multifamily_affordable_units (7960188): For multi-family properties, this indicates the number of units designated as affordable housing. The very high number of missing values suggests this is likely only relevant for a small subset of properties.
+
+income (363548): This is the reported income of the loan applicant(s). The missing values should be examined.
+
+debt_to_income_ratio (424156): This is the percentage representing the ratio of the borrower's total monthly debt payments to their gross monthly income. The missing values need consideration.
+
+applicant_credit_score_type (0): This indicates the type of credit scoring model used to assess the primary applicant's creditworthiness (e.g., Equifax, Experian, TransUnion).
+
+co-applicant_credit_score_type (0): This indicates the type of credit scoring model used for the co-applicant, if there is one.
+
+applicant_ethnicity-1 to applicant_ethnicity-5 (various high missing counts): These variables likely capture the ethnicity information provided by the primary applicant. The "-1" might represent the primary ethnicity, and subsequent numbers might indicate additional ethnicities if the applicant selected multiple categories. The very high number of missing values in -2 through -5 suggests that most applicants reported only one ethnicity.
+
+co-applicant_ethnicity-1 to co-applicant_ethnicity-5 (various very high missing counts): These are analogous to the applicant ethnicity variables but pertain to the co-applicant. The high missing values in -2 through -5 indicate that most applications likely have only one co-applicant or that the co-applicant reported only one ethnicity.
+
+applicant_ethnicity_observed (0): This indicates whether the lender visually observed the applicant's ethnicity if the applicant chose not to provide the information.
+
+co-applicant_ethnicity_observed (0): Similar to the above, but for the co-applicant.
+
+applicant_race-1 to applicant_race-5 (various high missing counts): These variables capture the race information provided by the primary applicant, similar to the ethnicity variables.
+
+co-applicant_race-1 to co-applicant_race-5 (various very high missing counts): These are analogous to the applicant race variables but pertain to the co-applicant.
+
+applicant_race_observed (0): This indicates whether the lender visually observed the applicant's race if the applicant chose not to provide the information.
+
+co-applicant_race_observed (0): Similar to the above, but for the co-applicant.
+
+applicant_sex (0): This is the self-reported sex of the primary applicant.
+
+co-applicant_sex (0): This is the self-reported sex of the co-applicant.
+
+applicant_sex_observed (0): This indicates whether the lender visually observed the applicant's sex if the applicant chose not to provide the information.
+
+co-applicant_sex_observed (0): Similar to the above, but for the co-applicant.
+
+applicant_age (0): This is the age of the primary applicant at the time of application.
+
+co-applicant_age (0): This is the age of the co-applicant at the time of application.
+
+applicant_age_above_62 (209495): This is a binary indicator (likely yes/no or true/false) of whether the primary applicant's age was above 62. The missing values might indicate cases where there was no primary applicant or the age was not recorded.
+
+co-applicant_age_above_62 (4839742): Similar to the above, but for the co-applicant. The high number of missing values could indicate a large number of applications without a co-applicant or missing age information for the co-applicant.
+
+submission_of_application (0): This indicates how the application was submitted (e.g., directly to the institution, through a broker).
+
+initially_payable_to_institution (0): This identifies the financial institution to which the initial payment on the loan is payable.
+
+aus-1 to aus-5 (various very high missing counts): "AUS" stands for Automated Underwriting System. These variables likely represent the names or results of up to five different automated systems used to evaluate the creditworthiness of the applicant(s). The very high missing values in AUS-2 through AUS-5 suggest that often only one AUS was used.
+
+denial_reason-1 to denial_reason-4 (very high missing counts for -2 to -4, 0 for -1): These variables indicate the reasons why a loan application was denied. denial_reason-1 is likely the primary reason, and subsequent numbers might indicate secondary or tertiary reasons. The high missing values in -2 to -4 indicate that most denials likely had only one primary reason recorded.
+
+tract_population (0): This is the total population of the census tract in which the property is located.
+
+tract_minority_population_percent (0): This is the percentage of the population within the census tract that is identified as minority.
+
+ffiec_msa_md_median_family_income (0): This is the median family income for the Metropolitan Statistical Area/Metropolitan Division (MSA/MD) as reported by the Federal Financial Institutions Examination Council (FFIEC).
+
+tract_to_msa_income_percentage (0): This is the percentage representing the ratio of the median income of the census tract to the median income of the broader MSA/MD.
+
+tract_owner_occupied_units (0): This is the number of housing units within the census tract that are occupied by their owners.
+
+tract_one_to_four_family_homes (0): This is the number of residential properties with one to four units within the census tract.
+
+tract_median_age_of_housing_units (0): This is the median age (in years) of the housing units within the census tract.
