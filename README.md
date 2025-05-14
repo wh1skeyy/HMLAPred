@@ -181,6 +181,9 @@ axes[2].tick_params(axis='x', rotation=45)
 plt.tight_layout()
 plt.show()
 ```
+![i1](https://i.imgur.com/u24m9Fj.png)
+![i2](https://i.imgur.com/5QayXhZ.png)
+![i3](https://i.imgur.com/j7wMnm2.png)
 
 *Insight:*
 - The number of loans with an interest rate of 15% is distinguishly larger than the rest. This brings a speculation that majority of the loans are of high risk.
@@ -206,6 +209,7 @@ risk_stats = df.groupBy('risk_group').agg(
 )
 risk_stats.show()
 ```
+![i4](https://i.imgur.com/lFnJrxC.png)
 *Insight:*
 - As confirmation to the previous speculation, it has indeed been proven that the loans of high risk are substantially bigger in number compared to loans of low and medium risk. 
 - The average loan amount and interest rate of high risk loans are also the highest (while the interest rate of the other two are close in nunber). After all, this is to be expected, as realistically, an  high-risk borrower applies for a loan, a high interest rate is to be expected.
@@ -235,7 +239,9 @@ axes[2].tick_params(axis='x', rotation=45)
 plt.tight_layout()
 plt.show()
 ```
-
+![i5](https://i.imgur.com/6efB45m.png)
+![i6](https://i.imgur.com/2I7LIUM.png)
+![i7](https://i.imgur.com/t6F5K9Q.png)
 *Insight:*
 - High Risk loans has more variability and outliers, with some loans exceeding $1 million. Seemingly, high-risk borrowers tend to borrow larger amounts than the other. This mmust have been a further push for the higher interest rate appearent in this specific group.  
 - For details on interest rate, High Risk loans has the highest median (~10%), Medium Risk (~7.5%), and Low Risk (~5%). Among them, high risk shows the most variability, with outliers up to 17.5%.
