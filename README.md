@@ -20,7 +20,7 @@ Filter 3: Popular variables -- Action taken
 **PROJECT PURPOSE**: Using the dataset, we aim to train a model that can **predict the loan approaval for a House Mortgage**. With a little attention on the 'Action taken' filters, you can see that those are the possible prediction results we are to generate. Among which, 'Loan Originated' and 'Application approved but not accepted' are approved loans; the rest are loans that get denied.
 
 ### Introduction to the dataset
-The dataset is of raw format, consisting of ___ columns and over 8.2 million observations (each column recored a piece of informatiom on the loaner)
+The dataset is of raw format, consisting of 100 columns and over 8.2 million observations (each column recored a piece of informatiom on the loaner)
 
 *For more details on the variables, please open 'var_des.txt'*
 
