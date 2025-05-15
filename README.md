@@ -192,6 +192,7 @@ plt.show()
 
 ### Variables' Distribution by risk group
 ![i10](https://i.imgur.com/3Wr7YIU.png)
+
 *Among the financial variables that we picked out, the one that usually has the nost influence in a loan approval decision is 'debt_to_income_ratio'. Hence, we created a 'risk group' column in the dataframe, where values are assigned to rows based on 'debt_to_income_ratio'. Specifically, observations with debt_to_income_ratio equal or below 36 are considered 'low risk'; ones with the ratio above 43 are 'high risk'; and the rest are 'medium risk'.*
 ```
 df = df.withColumn('risk_group',
