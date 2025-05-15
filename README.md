@@ -154,7 +154,7 @@ spark = SparkSession.builder \
 df = spark.read.csv("data_fixed_3.csv", header=True, inferSchema=True)
 df = df.sample(withReplacement=False, fraction=0.15, seed=42)
 ```
-* Credit variables' general distribution
+### Credit variables' general distribution
 ```
 # Credit variables
 credit_vars = ['loan_amount', 'interest_rate', 'debt_to_income_ratio', 'income','ltv_category', 'applicant_credit_score_type', 'applicant_age']
@@ -190,8 +190,9 @@ plt.show()
 -  The density of debt-to-income-ratio peaks at 42%, 44%, and 48% -- which are considered high for this ratio. This once again suggests that the concentrations of loans are on the 'high risk' side.
 - Though the largest portion of the loans are of small value, the number of those with high value is quite considerable.
 
-* Variables' Distribution by risk group
-First, we created a 'risk group' column in the dataframe. Values are then assigned to rows based on 'debt_to_income_ratio'. Specifically, observations with debt_to_income_ratio equal or below 36 are considered 'low risk'; ones with the ratio above 43 are 'high risk'; and the rest are 'medium risk'.
+### Variables' Distribution by risk group
+![i10](https://i.imgur.com/3Wr7YIU.png)
+*Among the financial variables that we picked out, the one that usually has the nost influence in a loan approval decision is 'debt_to_income_ratio'. Hence, we created a 'risk group' column in the dataframe, where values are assigned to rows based on 'debt_to_income_ratio'. Specifically, observations with debt_to_income_ratio equal or below 36 are considered 'low risk'; ones with the ratio above 43 are 'high risk'; and the rest are 'medium risk'.*
 ```
 df = df.withColumn('risk_group',
     when(col('debt_to_income_ratio') <= 36, 'Low Risk')
@@ -240,12 +241,12 @@ plt.tight_layout()
 plt.show()
 ```
 ![i5](https://i.imgur.com/6efB45m.png)
-![i6](https://i.imgur.com/2I7LIUM.png)
+![i6](https://i.imgur.com/Uy6WHTS.png)
 ![i7](https://i.imgur.com/t6F5K9Q.png)
 *Insight:*
 - High Risk loans has more variability and outliers, with some loans exceeding $1 million. Seemingly, high-risk borrowers tend to borrow larger amounts than the other. This mmust have been a further push for the higher interest rate appearent in this specific group.  
 - For details on interest rate, High Risk loans has the highest median (~10%), Medium Risk (~7.5%), and Low Risk (~5%). Among them, high risk shows the most variability, with outliers up to 17.5%.
-
+- This has been shown in the previous table, but regardless of risk level, the total value of the majority of loans is low.
 ## ML Model 
 *Description: In this part, we used the data set to train different types of ML model, then evaluate their predictions to choose the most prescise one for the web prediction application later on*
 
@@ -330,7 +331,8 @@ acc_sorted_indices = np.argsort(acc_values)[::-1]
 acc_values_sorted = np.array(acc_values)[acc_sorted_indices]
 classifier_names_acc_sorted = np.array(classifier_names)[acc_sorted_indices]
 ```
-
+![i8](https://i.imgur.com/ACeh7O1.png)
+*Insight*: As the result shows, the accuracy of the models is very close to each other, and it does not help much in choosing a model. And so, we went for a deeper inspection, which is extracting feature importances of top 3 most accurate models, namely, Bagging Classifier, Random Forest and LGBM.
 * Accuracy Visualization
 ```
 plt.barh(classifier_names_acc_sorted, acc_values_sorted, color='skyblue')
@@ -342,3 +344,5 @@ plt.gca().invert_yaxis()  # Best performance on top
 plt.tight_layout()
 plt.show()
 ```
+![i9](https://i.imgur.com/HnqPfpJ.png)
+*Insight*: According to the final results, LGBM Classifier considers a great number of input features when making predictions, thus, seems less biased than the other 2 models. Therefore, we chose LGBM as our prediction model for the web application.
