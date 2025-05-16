@@ -5,44 +5,65 @@
     <title>ML Model Prediction</title>
     <style>
         .form-container {
-            width: 900px;  /* Increased width to fit the static text column */
-            margin: 0 auto;  /* Center the form on the page */
+            width: 1400px;  /* Increased width to fit the static text column */
+            margin: 40px auto;  /* Center the form on the page with some top margin */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .form-group {
-            display: flex;  /* Use Flexbox for horizontal alignment */
-            align-items: center;  /* Vertically center label, input, and static text */
-            margin-bottom: 10px;  /* Space between each row */
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: center; /* Center form groups horizontally */
         }
         .form-group label {
-            width: 300px;  /* Fixed width for labels */
-            margin-right: 10px;  /* Space between label and input */
+            width: 300px;
+            margin-right: 10px;
+            text-align: right; /* Align label text to the right */
         }
         .form-group input {
-            width: 300px;  /* Width for input fields */
-            margin-right: 10px;  /* Space between input and static text */
+            width: 200px;
+            margin-right: 10px;
         }
         .form-group .notes {
-            width: 200px;  /* Width for static text column */
-            color: #555;  /* Lighter color for notes to distinguish them */
+            width: 500px;
+            color: #1b262c;
         }
         input[type="submit"] {
-            margin-top: 20px;  /* Space above the submit button */
+            margin-top: 20px;
+        }
+        .form-container {
+            width: 1400px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center the container vertically if possible */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <h1>Input Data for Prediction</h1>
+        <h1 style="text-align: center;">Input Data for Prediction</h1>
         <form action="/predict" method="post">
             <div class="form-group">
                 <label for="purchaser_type">Purchaser Type:</label>
                 <input type="text" id="purchaser_type" name="purchaser_type">
-                <span class="notes">XXXXXXXXXXXXXXXXX</span>
+                <span class="notes"> Possible Value: 1 - 2 - 3 - 4 - 5 - 6 - 71 - 72 - 8 - 9 </span>
             </div>
             <div class="form-group">
                 <label for="loan_type">Loan Type:</label>
                 <input type="text" id="loan_type" name="loan_type">
-                <span class="notes">XXXXXXXXXXXXXXXXX</span>
+                <span class="notes"> Possible Value: 1 - 2 - 3 - 4 </span>
             </div>
             <div class="form-group">
                 <label for="loan_purpose">Loan Purpose:</label>
@@ -214,12 +235,14 @@
                 <input type="text" id="loan_term_category" name="loan_term_category">
                 <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
-            <input type="submit" value="Predict">
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <input type="submit" value="Predict" style="font-size: 1.5em; padding: 10px 40px;">
+            </div>
         </form>
-
         {% if prediction %}
             <h2>Prediction: {{ prediction }}</h2>
         {% endif %}
+        <div style="height: 50px;"></div>
     </div>
 </body>
 </html>
