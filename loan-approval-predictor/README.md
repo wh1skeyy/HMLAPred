@@ -194,10 +194,49 @@ The LGBM model used in this application is trained to predict various actions ba
   5 - White
   6 - Information not provided by applicant in mail, internet, or telephone application
   7 - Not applicable
-applicant_race-2
   ```
   + co-applicant_race-1 -- Race of the first co-applicant or co-borrower
   ```
+  similar to applicant_race-1
+  8 - No co-applicant
   ```
+  + applicant_age_above_62 --  Whether the applicant or borrower age is 62 or above
+  ```
+  1 - Yes
+  2 - No
+  ```
+  + co-applicant_age_above_62
+  ```
+  1 - Yes
+  2 - No
+  ```
+  + aus-1 -- The automated underwriting system(s) (AUS) used by the financial institution to evaluate the application
+  ```
+  1 - Desktop Underwriter (DU)
+  2 - Loan Prospector (LP) or Loan Product Advisor
+  3 - Technology Open to Approved Lenders (TOTAL) Scorecard
+  4 - Guaranteed Underwriting System (GUS)
+  5 - Other
+  6 - Not applicable
+  7 - Internal Proprietary System
+  1111 - Exempt
+  ```
+  + denial_reason-1 -- The principal reason, or reasons, for denial
+  ```
+  1 - Debt-to-income ratio
+  2 - Employment history
+  3 - Credit history
+  4 - Collateral
+  5 - Insufficient cash (downpayment, closing costs)
+  6 - Unverifiable information
+  7 - Credit application incomplete
+  8 - Mortgage insurance denied
+  9 - Other
+  10 - Not applicable
+  ```
+
+
+
+
 
 
