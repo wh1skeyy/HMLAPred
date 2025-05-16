@@ -30,20 +30,23 @@ loan-approval-predictor
 
 2. **Install the required dependencies:**
    It is recommended to create a virtual environment before installing the dependencies.
-   ```bash
+   Right-click on /loan-approval-predictor, choose Terminal
+   Run:
    pip install -r requirements.txt
    ```
 
 ## Usage
 
 1. **Run the application:**
-   Navigate to the `src` directory and run the `app.py` file via terminal.
-   ```bash
+   Navigate to the `src` directory and run the `app.py` file.
+   Right-click on /src, choose Terminal
+   Run:
    python app.py
    ```
 
 2. **Access the web interface:**
    Open your web browser and go to `http://localhost:5000` or the appropriate URL based on the framework used.
+   On GitHub Codespaces, Navigate to Ports Tab on the Right-hand side of the Terminal, choose the Forwarded Address with Port 5000.
 
 3. **Input Variables:**
    Fill in the required input fields corresponding to the variables used in the LGBM model.
