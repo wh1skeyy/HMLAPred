@@ -1,4 +1,13 @@
 # Predict House Mortgage Loan Approval
+## Group 6 members & contribution
+- Trần Lê Minh__11224314 : **20%**
+- Đặng Minh Khuê__11223116 : **15%**
+- Nguyễn Xuân Trường__11226641 : **15%**
+- Trần Thế Kiệt__11223186 : **14%**
+- Nguyễn Thị Hải Quyên__11225487 : **13%**
+- Phạm Đức Quân__11225394 : **13%**
+- Phạm Tâm Ngân__11224599 : **10%**
+
 ## Project Overview
 For the chosen dataset of this project, we visited [ffiec.cfpb.gov](https://ffiec.cfpb.gov/data-browser/data/2023?category=states) (which is the U.S Home Mortgage Disclosure Act website) and filtered on the public records to suit the need of later analysis.
 
