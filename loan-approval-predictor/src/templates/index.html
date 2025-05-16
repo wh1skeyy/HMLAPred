@@ -3,87 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <title>ML Model Prediction</title>
+    <style>
+        .form-container {
+            width: 700px;  /* Adjust width as needed */
+            margin: 0 auto;  /* Center the form on the page */
+        }
+        .form-group {
+            display: flex;  /* Use Flexbox for horizontal alignment */
+            align-items: center;  /* Vertically center label and input */
+            margin-bottom: 10px;  /* Space between each row */
+        }
+        .form-group label {
+            width: 300px;  /* Fixed width for labels to align inputs */
+            margin-right: 10px;  /* Space between label and input */
+        }
+        .form-group input {
+            width: 300px;  /* Consistent width for all input fields */
+        }
+        input[type="submit"] {
+            margin-top: 20px;  /* Space above the submit button */
+        }
+    </style>
 </head>
 <body>
-    <h1>Input Data for Prediction</h1>
-    <form action="/predict" method="post">
-        <label for="purchaser_type">Purchaser Type:</label>
-        <input type="text" id="purchaser_type" name="purchaser_type"><br><br>
-        <label for="loan_type">Loan Type:</label>
-        <input type="text" id="loan_type" name="loan_type"><br><br>
-        <label for="loan_purpose">Loan Purpose:</label>
-        <input type="text" id="loan_purpose" name="loan_purpose"><br><br>
-        <label for="lien_status">Lien Status:</label>
-        <input type="text" id="lien_status" name="lien_status"><br><br>
-        <label for="loan_amount">Loan Amount:</label>
-        <input type="text" id="loan_amount" name="loan_amount"><br><br>
-        <label for="loan_to_value_ratio">Loan to Value Ratio:</label>
-        <input type="text" id="loan_to_value_ratio" name="loan_to_value_ratio"><br><br>
-        <label for="interest_rate">Interest Rate:</label>
-        <input type="text" id="interest_rate" name="interest_rate"><br><br>
-        <label for="rate_spread">Rate Spread:</label>
-        <input type="text" id="rate_spread" name="rate_spread"><br><br>
-        <label for="total_loan_costs">Total Loan Costs:</label>
-        <input type="text" id="total_loan_costs" name="total_loan_costs"><br><br>
-        <label for="total_points_and_fees">Total Points and Fees:</label>
-        <input type="text" id="total_points_and_fees" name="total_points_and_fees"><br><br>
-        <label for="origination_charges">Origination Charges:</label>
-        <input type="text" id="origination_charges" name="origination_charges"><br><br>
-        <label for="discount_points">Discount Points:</label>
-        <input type="text" id="discount_points" name="discount_points"><br><br>
-        <label for="loan_term">Loan Term:</label>
-        <input type="text" id="loan_term" name="loan_term"><br><br>
-        <label for="property_value">Property Value:</label>
-        <input type="text" id="property_value" name="property_value"><br><br>
-        <label for="construction_method">Construction Method:</label>
-        <input type="text" id="construction_method" name="construction_method"><br><br>
-        <label for="occupancy_type">Occupancy Type:</label>
-        <input type="text" id="occupancy_type" name="occupancy_type"><br><br>
-        <label for="manufactured_home_secured_property_type">Manufactured Home Secured Property Type:</label>
-        <input type="text" id="manufactured_home_secured_property_type" name="manufactured_home_secured_property_type"><br><br>
-        <label for="manufactured_home_land_property_interest">Manufactured Home Land Property Interest:</label>
-        <input type="text" id="manufactured_home_land_property_interest" name="manufactured_home_land_property_interest"><br><br>
-        <label for="total_units">Total Units:</label>
-        <input type="text" id="total_units" name="total_units"><br><br>
-        <label for="income">Income:</label>
-        <input type="text" id="income" name="income"><br><br>
-        <label for="debt_to_income_ratio">Debt to Income Ratio:</label>
-        <input type="text" id="debt_to_income_ratio" name="debt_to_income_ratio"><br><br>
-        <label for="applicant_credit_score_type">Applicant Credit Score Type:</label>
-        <input type="text" id="applicant_credit_score_type" name="applicant_credit_score_type"><br><br>
-        <label for="co-applicant_credit_score_type">Co-applicant Credit Score Type:</label>
-        <input type="text" id="co-applicant_credit_score_type" name="co-applicant_credit_score_type"><br><br>
-        <label for="applicant_ethnicity-1">Applicant Ethnicity-1:</label>
-        <input type="text" id="applicant_ethnicity-1" name="applicant_ethnicity-1"><br><br>
-        <label for="co-applicant_ethnicity-1">Co-applicant Ethnicity-1:</label>
-        <input type="text" id="co-applicant_ethnicity-1" name="co-applicant_ethnicity-1"><br><br>
-        <label for="applicant_race-1">Applicant Race-1:</label>
-        <input type="text" id="applicant_race-1" name="applicant_race-1"><br><br>
-        <label for="co-applicant_race-1">Co-applicant Race-1:</label>
-        <input type="text" id="co-applicant_race-1" name="co-applicant_race-1"><br><br>
-        <label for="applicant_age">Applicant Age:</label>
-        <input type="text" id="applicant_age" name="applicant_age"><br><br>
-        <label for="co-applicant_age">Co-applicant Age:</label>
-        <input type="text" id="co-applicant_age" name="co-applicant_age"><br><br>
-        <label for="applicant_age_above_62">Applicant Age Above 62:</label>
-        <input type="text" id="applicant_age_above_62" name="applicant_age_above_62"><br><br>
-        <label for="co-applicant_age_above_62">Co-applicant Age Above 62:</label>
-        <input type="text" id="co-applicant_age_above_62" name="co-applicant_age_above_62"><br><br>
-        <label for="aus-1">AUS-1:</label>
-        <input type="text" id="aus-1" name="aus-1"><br><br>
-        <label for="denial_reason-1">Denial Reason-1:</label>
-        <input type="text" id="denial_reason-1" name="denial_reason-1"><br><br>
-        <label for="ltv_category">LTV Category:</label>
-        <input type="text" id="ltv_category" name="ltv_category"><br><br>
-        <label for="dti_category">DTI Category:</label>
-        <input type="text" id="dti_category" name="dti_category"><br><br>
-        <label for="loan_term_category">Loan Term Category:</label>
-        <input type="text" id="loan_term_category" name="loan_term_category"><br><br>
-        <input type="submit" value="Predict">
-    </form>
+    <div class="form-container">
+        <h1>Input Data for Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="purchaser_type">Purchaser Type:</label>
+                <input type="text" id="purchaser_type" name="purchaser_type">
+            </div>
+            <div class="form-group">
+                <label for="loan_type">Loan Type:</label>
+                <input type="text" id="loan_type" name="loan_type">
+            </div>
+            <div class="form-group">
+                <label for="loan_purpose">Loan Purpose:</label>
+                <input type="text" id="loan_purpose" name="loan_purpose">
+            </div>
+            <div class="form-group">
+                <label for="lien_status">Lien Status:</label>
+                <input type="text" id="lien_status" name="lien_status">
+            </div>
+            <div class="form-group">
+                <label for="loan_amount">Loan Amount:</label>
+                <input type="text" id="loan_amount" name="loan_amount">
+            </div>
+            <div class="form-group">
+                <label for="loan_to_value_ratio">Loan to Value Ratio:</label>
+                <input type="text" id="loan_to_value_ratio" name="loan_to_value_ratio">
+            </div>
+            <div class="form-group">
+                <label for="interest_rate">Interest Rate:</label>
+                <input type="text" id="interest_rate" name="interest_rate">
+            </div>
+            <div class="form-group">
+                <label for="rate_spread">Rate Spread:</label>
+                <input type="text" id="rate_spread" name="rate_spread">
+            </div>
+            <div class="form-group">
+                <label for="total_loan_costs">Total Loan Costs:</label>
+                <input type="text" id="total_loan_costs" name="total_loan_costs">
+            </div>
+            <div class="form-group">
+                <label for="total_points_and_fees">Total Points and Fees:</label>
+                <input type="text" id="total_points_and_fees" name="total_points_and_fees">
+            </div>
+            <div class="form-group">
+                <label for="origination_charges">Origination Charges:</label>
+                <input type="text" id="origination_charges" name="origination_charges">
+            </div>
+            <div class="form-group">
+                <label for="discount_points">Discount Points:</label>
+                <input type="text" id="discount_points" name="discount_points">
+            </div>
+            <div class="form-group">
+                <label for="loan_term">Loan Term:</label>
+                <input type="text" id="loan_term" name="loan_term">
+            </div>
+            <div class="form-group">
+                <label for="property_value">Property Value:</label>
+                <input type="text" id="property_value" name="property_value">
+            </div>
+            <div class="form-group">
+                <label for="construction_method">Construction Method:</label>
+                <input type="text" id="construction_method" name="construction_method">
+            </div>
+            <div class="form-group">
+                <label for="occupancy_type">Occupancy Type:</label>
+                <input type="text" id="occupancy_type" name="occupancy_type">
+            </div>
+            <div class="form-group">
+                <label for="manufactured_home_secured_property_type">Manufactured Home Secured Property Type:</label>
+                <input type="text" id="manufactured_home_secured_property_type" name="manufactured_home_secured_property_type">
+            </div>
+            <div class="form-group">
+                <label for="manufactured_home_land_property_interest">Manufactured Home Land Property Interest:</label>
+                <input type="text" id="manufactured_home_land_property_interest" name="manufactured_home_land_property_interest">
+            </div>
+            <div class="form-group">
+                <label for="total_units">Total Units:</label>
+                <input type="text" id="total_units" name="total_units">
+            </div>
+            <div class="form-group">
+                <label for="income">Income:</label>
+                <input type="text" id="income" name="income">
+            </div>
+            <div class="form-group">
+                <label for="debt_to_income_ratio">Debt to Income Ratio:</label>
+                <input type="text" id="debt_to_income_ratio" name="debt_to_income_ratio">
+            </div>
+            <div class="form-group">
+                <label for="applicant_credit_score_type">Applicant Credit Score Type:</label>
+                <input type="text" id="applicant_credit_score_type" name="applicant_credit_score_type">
+            </div>
+            <div class="form-group">
+                <label for="co-applicant_credit_score_type">Co-applicant Credit Score Type:</label>
+                <input type="text" id="co-applicant_credit_score_type" name="co-applicant_credit_score_type">
+            </div>
+            <div class="form-group">
+                <label for="applicant_ethnicity-1">Applicant Ethnicity-1:</label>
+                <input type="text" id="applicant_ethnicity-1" name="applicant_ethnicity-1">
+            </div>
+            <div class="form-group">
+                <label for="co-applicant_ethnicity-1">Co-applicant Ethnicity-1:</label>
+                <input type="text" id="co-applicant_ethnicity-1" name="co-applicant_ethnicity-1">
+            </div>
+            <div class="form-group">
+                <label for="applicant_race-1">Applicant Race-1:</label>
+                <input type="text" id="applicant_race-1" name="applicant_race-1">
+            </div>
+            <div class="form-group">
+                <label for="co-applicant_race-1">Co-applicant Race-1:</label>
+                <input type="text" id="co-applicant_race-1" name="co-applicant_race-1">
+            </div>
+            <div class="form-group">
+                <label for="applicant_age">Applicant Age:</label>
+                <input type="text" id="applicant_age" name="applicant_age">
+            </div>
+            <div class="form-group">
+                <label for="co-applicant_age">Co-applicant Age:</label>
+                <input type="text" id="co-applicant_age" name="co-applicant_age">
+            </div>
+            <div class="form-group">
+                <label for="applicant_age_above_62">Applicant Age Above 62:</label>
+                <input type="text" id="applicant_age_above_62" name="applicant_age_above_62">
+            </div>
+            <div class="form-group">
+                <label for="co-applicant_age_above_62">Co-applicant Age Above 62:</label>
+                <input type="text" id="co-applicant_age_above_62" name="co-applicant_age_above_62">
+            </div>
+            <div class="form-group">
+                <label for="aus-1">AUS-1:</label>
+                <input type="text" id="aus-1" name="aus-1">
+            </div>
+            <div class="form-group">
+                <label for="denial_reason-1">Denial Reason-1:</label>
+                <input type="text" id="denial_reason-1" name="denial_reason-1">
+            </div>
+            <div class="form-group">
+                <label for="ltv_category">LTV Category:</label>
+                <input type="text" id="ltv_category" name="ltv_category">
+            </div>
+            <div class="form-group">
+                <label for="dti_category">DTI Category:</label>
+                <input type="text" id="dti_category" name="dti_category">
+            </div>
+            <div class="form-group">
+                <label for="loan_term_category">Loan Term Category:</label>
+                <input type="text" id="loan_term_category" name="loan_term_category">
+            </div>
+            <input type="submit" value="Predict">
+        </form>
 
-    {% if prediction %}
-        <h2>Prediction: {{ prediction }}</h2>
-    {% endif %}
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
 </body>
 </html>
