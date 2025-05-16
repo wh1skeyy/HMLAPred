@@ -1,8 +1,8 @@
 # Predict House Mortgage Loan Approval
 ## Group 6 members & contribution
-- Trần Lê Minh__11224314 : **20%**
-- Đặng Minh Khuê__11223116 : **15%**
-- Nguyễn Xuân Trường__11226641 : **15%**
+- Trần Lê Minh__11224314 : **18%**
+- Đặng Minh Khuê__11223116 : **16%**
+- Nguyễn Xuân Trường__11226641 : **16%**
 - Trần Thế Kiệt__11223186 : **14%**
 - Nguyễn Thị Hải Quyên__11225487 : **13%**
 - Phạm Đức Quân__11225394 : **13%**
