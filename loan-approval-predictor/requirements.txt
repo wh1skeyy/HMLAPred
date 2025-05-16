@@ -1,0 +1,5 @@
+pandas
+lightgbm
+flask
+cloudpickle
+numpy
