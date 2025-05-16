@@ -383,7 +383,8 @@ bst = lgb.Booster(model_file=r"C:\Users\DELL\Downloads\lgbm.txt")
 def home():
     return render_template('index.html')
 ```
-When you go to the site (e.g., http://localhost:5000/), it shows the index.html file from your Downloads folder.
+When you go to the site (e.g., http://localhost:5000/), it shows the 'index.html' file.
+
 
 * Define loan outcome categories
 ```
