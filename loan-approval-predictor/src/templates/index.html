@@ -5,20 +5,25 @@
     <title>ML Model Prediction</title>
     <style>
         .form-container {
-            width: 700px;  /* Adjust width as needed */
+            width: 900px;  /* Increased width to fit the static text column */
             margin: 0 auto;  /* Center the form on the page */
         }
         .form-group {
             display: flex;  /* Use Flexbox for horizontal alignment */
-            align-items: center;  /* Vertically center label and input */
+            align-items: center;  /* Vertically center label, input, and static text */
             margin-bottom: 10px;  /* Space between each row */
         }
         .form-group label {
-            width: 300px;  /* Fixed width for labels to align inputs */
+            width: 300px;  /* Fixed width for labels */
             margin-right: 10px;  /* Space between label and input */
         }
         .form-group input {
-            width: 300px;  /* Consistent width for all input fields */
+            width: 300px;  /* Width for input fields */
+            margin-right: 10px;  /* Space between input and static text */
+        }
+        .form-group .notes {
+            width: 200px;  /* Width for static text column */
+            color: #555;  /* Lighter color for notes to distinguish them */
         }
         input[type="submit"] {
             margin-top: 20px;  /* Space above the submit button */
@@ -32,146 +37,182 @@
             <div class="form-group">
                 <label for="purchaser_type">Purchaser Type:</label>
                 <input type="text" id="purchaser_type" name="purchaser_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_type">Loan Type:</label>
                 <input type="text" id="loan_type" name="loan_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_purpose">Loan Purpose:</label>
                 <input type="text" id="loan_purpose" name="loan_purpose">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="lien_status">Lien Status:</label>
                 <input type="text" id="lien_status" name="lien_status">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_amount">Loan Amount:</label>
                 <input type="text" id="loan_amount" name="loan_amount">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_to_value_ratio">Loan to Value Ratio:</label>
                 <input type="text" id="loan_to_value_ratio" name="loan_to_value_ratio">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="interest_rate">Interest Rate:</label>
                 <input type="text" id="interest_rate" name="interest_rate">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="rate_spread">Rate Spread:</label>
                 <input type="text" id="rate_spread" name="rate_spread">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="total_loan_costs">Total Loan Costs:</label>
                 <input type="text" id="total_loan_costs" name="total_loan_costs">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="total_points_and_fees">Total Points and Fees:</label>
                 <input type="text" id="total_points_and_fees" name="total_points_and_fees">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="origination_charges">Origination Charges:</label>
                 <input type="text" id="origination_charges" name="origination_charges">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="discount_points">Discount Points:</label>
                 <input type="text" id="discount_points" name="discount_points">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_term">Loan Term:</label>
                 <input type="text" id="loan_term" name="loan_term">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="property_value">Property Value:</label>
                 <input type="text" id="property_value" name="property_value">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="construction_method">Construction Method:</label>
                 <input type="text" id="construction_method" name="construction_method">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="occupancy_type">Occupancy Type:</label>
                 <input type="text" id="occupancy_type" name="occupancy_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="manufactured_home_secured_property_type">Manufactured Home Secured Property Type:</label>
                 <input type="text" id="manufactured_home_secured_property_type" name="manufactured_home_secured_property_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="manufactured_home_land_property_interest">Manufactured Home Land Property Interest:</label>
                 <input type="text" id="manufactured_home_land_property_interest" name="manufactured_home_land_property_interest">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="total_units">Total Units:</label>
                 <input type="text" id="total_units" name="total_units">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="income">Income:</label>
                 <input type="text" id="income" name="income">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="debt_to_income_ratio">Debt to Income Ratio:</label>
                 <input type="text" id="debt_to_income_ratio" name="debt_to_income_ratio">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="applicant_credit_score_type">Applicant Credit Score Type:</label>
                 <input type="text" id="applicant_credit_score_type" name="applicant_credit_score_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="co-applicant_credit_score_type">Co-applicant Credit Score Type:</label>
                 <input type="text" id="co-applicant_credit_score_type" name="co-applicant_credit_score_type">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="applicant_ethnicity-1">Applicant Ethnicity-1:</label>
                 <input type="text" id="applicant_ethnicity-1" name="applicant_ethnicity-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="co-applicant_ethnicity-1">Co-applicant Ethnicity-1:</label>
                 <input type="text" id="co-applicant_ethnicity-1" name="co-applicant_ethnicity-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="applicant_race-1">Applicant Race-1:</label>
                 <input type="text" id="applicant_race-1" name="applicant_race-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="co-applicant_race-1">Co-applicant Race-1:</label>
                 <input type="text" id="co-applicant_race-1" name="co-applicant_race-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="applicant_age">Applicant Age:</label>
                 <input type="text" id="applicant_age" name="applicant_age">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="co-applicant_age">Co-applicant Age:</label>
                 <input type="text" id="co-applicant_age" name="co-applicant_age">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="applicant_age_above_62">Applicant Age Above 62:</label>
                 <input type="text" id="applicant_age_above_62" name="applicant_age_above_62">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="co-applicant_age_above_62">Co-applicant Age Above 62:</label>
                 <input type="text" id="co-applicant_age_above_62" name="co-applicant_age_above_62">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="aus-1">AUS-1:</label>
                 <input type="text" id="aus-1" name="aus-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="denial_reason-1">Denial Reason-1:</label>
                 <input type="text" id="denial_reason-1" name="denial_reason-1">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="ltv_category">LTV Category:</label>
                 <input type="text" id="ltv_category" name="ltv_category">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="dti_category">DTI Category:</label>
                 <input type="text" id="dti_category" name="dti_category">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <div class="form-group">
                 <label for="loan_term_category">Loan Term Category:</label>
                 <input type="text" id="loan_term_category" name="loan_term_category">
+                <span class="notes">XXXXXXXXXXXXXXXXX</span>
             </div>
             <input type="submit" value="Predict">
         </form>
