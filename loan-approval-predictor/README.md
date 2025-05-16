@@ -41,6 +41,7 @@ loan-approval-predictor
    Navigate to the `src` directory and run the `app.py` file.
    Right-click on /src, choose Terminal
    Run:
+   ```
    python app.py
    ```
 
@@ -57,3 +58,87 @@ loan-approval-predictor
 ## LGBM Model Information
 
 The LGBM model used in this application is trained to predict various actions based on input features. Ensure that the input variables match the expected format and data types as required by the model.
+
+## Description of the variables on the web application form and their possible values
+* Any variables that have possible values as float: any float number
+
+* Variables that only have certain values:
+
+  +  purchaser_type -- Type of entity purchasing a covered loan from the institution
+  ```
+  Values:
+  0 - Not applicable
+  1 - Fannie Mae
+  2 - Ginnie Mae
+  3 - Freddie Mac
+  4 - Farmer Mac
+  5 - Private securitizer
+  6 - Commercial bank, savings bank, or savings association
+  71 - Credit union, mortgage company, or finance company
+  72 - Life insurance company
+  8 - Affiliate institution
+  9 - Other type of purchaser
+  ```
+
+  +  loan_type -- The type of covered loan or application
+  ```
+  Values:
+  1 - Conventional (not insured or guaranteed by FHA, VA, RHS, or FSA)
+  2 - Federal Housing Administration insured (FHA)
+  3 - Veterans Affairs guaranteed (VA)
+  4 - USDA Rural Housing Service or Farm Service Agency guaranteed (RHS or FSA)
+  ```
+  + loan_purpose -- The purpose of covered loan or application
+  ```
+  Values:
+  1 - Home purchase
+  2 - Home improvement
+  31 - Refinancing
+  32 - Cash-out refinancing
+  4 - Other purpose
+  5 - Not applicable
+  ```
+  +  lien_status -- Lien status of the property securing the covered loan, or in the case of an application, proposed to secure the covered loan
+  ```
+
+  ```
+  + construction_method -- Construction method for the dwelling
+  ```
+
+  ```
+  + occupancy_type -- Occupancy type for the dwelling
+  ```
+
+  ```
+  + manufactured_home_secured_property_type -- Whether the covered loan or application is, or would have been, secured by a manufactured home and land, or by a manufactured home and not land
+  ```
+
+  ```
+  + manufactured_home_land_property_interest -- The applicant’s or borrower’s land property interest in the land on which a manufactured home is, or will be, located
+  ```
+
+  ```
+  + applicant_credit_score_type -- The name and version of the credit scoring model used to generate the credit score, or scores, relied on in making the credit decision
+  ```
+  
+  ```
+  + co-applicant_credit_score_type -- The name and version of the credit scoring model used to generate the credit score, or scores, relied on in making the credit decision
+  ```
+
+  ```
+  + applicant_ethnicity-1 -- Ethnicity of the applicant or borrower
+  ```
+
+  ```
+  + co-applicant_ethnicity-1 -- Ethnicity of the first co-applicant or co-borrower
+  ```
+
+  ```
+  + applicant_race-1 -- Race of the applicant or borrower
+  ```
+  ```
+  + co-applicant_race-1 -- Race of the first co-applicant or co-borrower
+  ```
+  ```
+
+
