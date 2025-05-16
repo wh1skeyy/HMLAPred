@@ -202,13 +202,13 @@ The LGBM model used in this application is trained to predict various actions ba
   ```
   + applicant_age_above_62 --  Whether the applicant or borrower age is 62 or above
   ```
+  0 - No
   1 - Yes
-  2 - No
   ```
   + co-applicant_age_above_62
   ```
+  0 - No
   1 - Yes
-  2 - No
   ```
   + aus-1 -- The automated underwriting system(s) (AUS) used by the financial institution to evaluate the application
   ```
@@ -233,6 +233,27 @@ The LGBM model used in this application is trained to predict various actions ba
   8 - Mortgage insurance denied
   9 - Other
   10 - Not applicable
+  ```
+  + ltv_category -- classification of loan to value
+  ```
+  0 - High
+  1 - Low
+  2 - Medium
+  3 - Missing
+  ```
+  + dti_category -- classification of debt-to-income ratio
+  ```
+  0 - 30-50
+  1 - <30
+  2 - >50
+  3 - Missing
+  ```
+  + loan_term_category -- classification of loan term
+  ```
+  0 - Long
+  1 - Medium
+  2 - Missing
+  3 - Short
   ```
 
 
