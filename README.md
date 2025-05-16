@@ -201,7 +201,7 @@ df = df.withColumn('risk_group',
     .otherwise('High Risk'))
 ```
 
-Following that, a statistic table is created, consisting of the mean of 'loan_amount' & 'interest rate' along with the most common 'loan_total_value_category' at each risk level.
+Following that, a statistic table is created, consisting of the mean of 'loan_amount' & 'interest rate' along with the most common 'loan_to_value_category' at each risk level.
 ```
 risk_stats = df.groupBy('risk_group').agg(
     count('*').alias('count'),
@@ -347,3 +347,81 @@ plt.show()
 ```
 ![i9](https://i.imgur.com/HnqPfpJ.png)
 *Insight*: According to the final results, LGBM Classifier considers a great number of input features when making predictions, thus, seems less biased than the other 2 models. Therefore, we chose LGBM as our prediction model for the web application.
+
+## Web Application
+*Everything related to the application is in the 'loan-approval-predictor' folder, including the instruction (README.md). If you want to try running the application, please download the folder and follow the instruction.*
+
+The following is a rough description of 'app.py' (how the application works):
+
+* Import libraries and Set Up the Flask App 
+```
+from flask import Flask, request, render_template
+import pandas as pd
+import lightgbm as lgb
+import numpy as np
+
+app = Flask(__name__)
+```
+* Load the ML model
+```
+bst = lgb.Booster(model_file=r"C:\Users\DELL\Downloads\lgbm.txt")
+```
+*(this is the text formula previously exported from the chosen model)*
+
+* Define the home page
+```
+@app.route('/')
+def home():
+    return render_template('index.html')
+```
+When you go to the site (e.g., http://localhost:5000/), it shows the index.html file from your Downloads folder.
+
+* Define loan outcome categories
+```
+action_taken_labels = [
+    "Loan originated",
+    "Application approved but not accepted",
+    "Application denied",
+    "Preapproval request denied",
+    "Preapproval request approved but not accepted"
+]
+```
+* Set up prediction route
+```
+@app.route('/predict', methods=['POST'])
+```
+* Predict fuction
+```
+def predict():
+    # Get user inputs from the form
+    purchaser_type = request.form['purchaser_type']
+    loan_type = request.form['loan_type']
+    ....
+
+    # Create a DataFrame from the inputs
+    
+    input_data = ",".join([
+        str(purchaser_type), str(loan_type),
+        ....
+    ])
+
+    # Save input_data as a CSV file
+    header = [
+        "purchaser_type", "loan_type",...]
+    
+    df = pd.DataFrame([input_data.split(",")], columns=header)
+    df.to_csv("input_data.csv", index=False, header=False)
+
+    # Make a prediction using the model
+    prediction = bst.predict("input_data.csv")
+
+    # Find the index of the highest probability
+    predicted_index = np.argmax(prediction)
+
+    # Map the index to the category label
+    predicted_category = action_taken_labels[predicted_index]
+
+    # Render the result back to the UI
+    return render_template('index.html', prediction=predicted_category)
+```
+Basically, toward the end, each type of 'action taken' would have a predicted index, and the one with the highest index will be chosen to return as the result.
