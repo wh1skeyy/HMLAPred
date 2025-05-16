@@ -14,7 +14,7 @@ Filter 3: Popular variables -- Action taken
 
 (Once chosen 'Action taken', there are additional filters. And the selected ones are **Loan Originated, Application approved but not accepted, Application denied, Preapproval request denied, Preapproval request approved but not accepted** )
 
-[Link to the dataset]()
+[Link to the dataset](https://drive.google.com/drive/folders/1xefIBtmNSqHNAYfxEYVD2_DOuf1htImo?usp=drive_link)
 *(Disclaimer: since the dataset is quite big -- 2,9 GB, it cannot be uploaded onto Github. And so we uploaded it to drive instead. The cleaned data is also in the same folder.)*
 
 **PROJECT PURPOSE**: Using the dataset, we aim to train a model that can **predict the loan approaval for a House Mortgage**. With a little attention on the 'Action taken' filters, you can see that those are the possible prediction results we are to generate. Among which, 'Loan Originated' and 'Application approved but not accepted' are approved loans; the rest are loans that get denied.
@@ -386,12 +386,9 @@ action_taken_labels = [
     "Preapproval request approved but not accepted"
 ]
 ```
-* Set up prediction route
-```
-@app.route('/predict', methods=['POST'])
-```
 * Predict fuction
 ```
+@app.route('/predict', methods=['POST'])
 def predict():
     # Get user inputs from the form
     purchaser_type = request.form['purchaser_type']
