@@ -100,42 +100,101 @@ The LGBM model used in this application is trained to predict various actions ba
   ```
   +  lien_status -- Lien status of the property securing the covered loan, or in the case of an application, proposed to secure the covered loan
   ```
-
+   Values:
+   1 - Secured by a first lien
+   2 - Secured by a subordinate lien
   ```
   + construction_method -- Construction method for the dwelling
   ```
-
+  1 - Site-built
+  2 - Manufactured home
   ```
   + occupancy_type -- Occupancy type for the dwelling
   ```
-
+  1 - Principal residence
+  2 - Second residence
+  3 - Investment property
   ```
   + manufactured_home_secured_property_type -- Whether the covered loan or application is, or would have been, secured by a manufactured home and land, or by a manufactured home and not land
   ```
-
+  1 - Manufactured home and land
+  2 - Manufactured home and not land
+  3 - Not applicable
+  1111 - Exempt
   ```
   + manufactured_home_land_property_interest -- The applicant’s or borrower’s land property interest in the land on which a manufactured home is, or will be, located
   ```
-
+  1 - Direct ownership
+  2 - Indirect ownership
+  3 - Paid leasehold
+  4 - Unpaid leasehold
+  5 - Not applicable
+  1111 - Exempt
   ```
   + applicant_credit_score_type -- The name and version of the credit scoring model used to generate the credit score, or scores, relied on in making the credit decision
   ```
-  
+  1 - Equifax Beacon 5.0
+  2 - Experian Fair Isaac
+  3 - FICO Risk Score Classic 04
+  4 - FICO Risk Score Classic 98
+  5 - VantageScore 2.0
+  6 - VantageScore 3.0
+  7 - More than one credit scoring model
+  8 - Other credit scoring model
+  9 - Not applicable
+  1111 - Exempt
   ```
   + co-applicant_credit_score_type -- The name and version of the credit scoring model used to generate the credit score, or scores, relied on in making the credit decision
   ```
-
+  1 - Equifax Beacon 5.0
+  2 - Experian Fair Isaac
+  3 - FICO Risk Score Classic 04
+  4 - FICO Risk Score Classic 98
+  5 - VantageScore 2.0
+  6 - VantageScore 3.0
+  7 - More than one credit scoring model
+  8 - Other credit scoring model
+  9 - Not applicable
+  10 - No co-applicant
+  1111 - Exempt
   ```
   + applicant_ethnicity-1 -- Ethnicity of the applicant or borrower
   ```
-
+  1 - Hispanic or Latino
+  11 - Mexican
+  12 - Puerto Rican
+  13 - Cuban
+  14 - Other Hispanic or Latino
+  2 - Not Hispanic or Latino
+  3 - Information not provided by applicant in mail, internet, or telephone application
+  4 - Not applicable
   ```
   + co-applicant_ethnicity-1 -- Ethnicity of the first co-applicant or co-borrower
   ```
-
+  similar to applicant_ethnicity-1
+  5 - No co-applicant
   ```
   + applicant_race-1 -- Race of the applicant or borrower
   ```
+  1 - American Indian or Alaska Native
+  2 - Asian
+  21 - Asian Indian
+  22 - Chinese
+  23 - Filipino
+  24 - Japanese
+  25 - Korean
+  26 - Vietnamese
+  27 - Other Asian
+  3 - Black or African American
+  4 - Native Hawaiian or Other Pacific Islander
+  41 - Native Hawaiian
+  42 - Guamanian or Chamorro
+  43 - Samoan
+  44 - Other Pacific Islander
+  5 - White
+  6 - Information not provided by applicant in mail, internet, or telephone application
+  7 - Not applicable
+applicant_race-2
   ```
   + co-applicant_race-1 -- Race of the first co-applicant or co-borrower
   ```
