@@ -26,7 +26,8 @@ Filter 3: Popular variables -- Action taken
 [Link to the dataset](https://drive.google.com/drive/folders/1xefIBtmNSqHNAYfxEYVD2_DOuf1htImo?usp=drive_link)
 *(Disclaimer: since the dataset is quite big -- 2,9 GB, it cannot be uploaded onto Github. And so we uploaded it to drive instead. The cleaned data is also in the same folder.)*
 
-**PROJECT PURPOSE**: Using the dataset, we aim to train a model that can **predict the loan approaval for a House Mortgage**. With a little attention on the 'Action taken' filters, you can see that those are the possible prediction results we are to generate. Among which, 'Loan Originated' and 'Application approved but not accepted' are approved loans; the rest are loans that get denied.
+**PROJECT PURPOSE**: This project serves 2 purposes:
+1. Use for analysis on how factors in the dataset affect the 
 
 ### Introduction to the dataset
 The dataset is of raw format, consisting of 100 columns and over 8.2 million observations (each column recored a piece of informatiom on the loaner)
