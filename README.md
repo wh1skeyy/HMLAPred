@@ -1,4 +1,4 @@
-# Predict House Mortgage Loan Approval
+# House Mortgage Loan Approval Prediction
 ## Project Overview
 For the chosen dataset of this project, we visited [ffiec.cfpb.gov](https://ffiec.cfpb.gov/data-browser/data/2023?category=states) (which is the U.S Home Mortgage Disclosure Act website) and filtered on the public records to suit the need of later analysis.
 
